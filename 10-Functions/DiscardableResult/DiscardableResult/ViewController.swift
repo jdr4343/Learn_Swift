@@ -20,16 +20,19 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+//함수 선언과 메소드 선언에 추가할수있는 어트래뷰트 그대로 해석해보면 버릴수 있는 결과
 
+//Discardableresult 함수가 리턴한결과를 사용하지 않고 버린다,무시한다.
 import UIKit
 
 
-func doSomething() {
+func doSomething() {// 값을 리턴하지 않고
    print("Something secret")
 }
-
-func saySomething() -> String {
+@discardableResult
+func saySomething() -> String {//문자열을 리턴
    return "Hello"
+    //resuit 함수가 리턴하는 결과
 }
 
 class ViewController: UIViewController {
@@ -42,4 +45,4 @@ class ViewController: UIViewController {
       saySomething()
    }
 }
-
+//만약선언을 수정할수 없을떄에는  _ = saySomething() 이렇게 와일드카드패턴을 사용해 함수가 리턴하는 값을 사용하지 않는다고 명시적으로 표현했기떄문에 경고가 뜨지 않습니다.

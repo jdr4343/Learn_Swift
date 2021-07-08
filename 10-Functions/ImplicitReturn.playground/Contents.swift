@@ -30,7 +30,15 @@ import UIKit
  */
 
 func add(a: Int, b: Int) -> Int {
-   return a + b
+    a + b // 단일 표현식으로 구현된 함수바디에선 리턴표현식을 생략하는것이 ImplicitReturn 입니다.
+    
 }
 
 add(a: 1, b: 2)
+
+func edd(a: Int, b: Int) -> Int {
+    print(a + b)
+   return a + b //보기와 같이 단일표현식이 아니라면 return 키워드를 입력해야함
+    
+}
+edd(a: 1, b: 2)
