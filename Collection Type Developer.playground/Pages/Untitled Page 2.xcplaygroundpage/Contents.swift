@@ -117,23 +117,32 @@ food.insert("Kimchi")
 food
 
 //셋’ 의 remove(_:) 메소드를 호출하여 셋에 있는 항목을 삭제할 수 있는데, 이는 그 항목이 셋의 멤버라면 이를 삭제하고, 삭제한 값을 반환하지만, ‘셋’ 이 이를 담고 있지 않은 경우 nil 을 반환합니다. 또 다른 방법으로는, removeAll() 메소드로 ‘셋’ 에 있는 모든 항목을 삭제할 수 있습니다
-
-
+food.remove("Stake")
+food
 //셋이 특정 항목을 담고 있는 지를 검사하려면, contains(_:) 메소드를 사용합니다.
-
+food.contains("Stake")
 
 //Iterating Over a Set (셋에 동작을 반복시키기)
-
+for foodlist in food {
+    print("\(foodlist)")
+}
 
 
 //스위프트의 Set 타입은 ‘정의된 순서 (defined ordering)’ 를 가지고 있지 않습니다. 지정된 순서로 셋의 값들에 동작을 반복시키려면, ‘셋’ 의 원소를 < 연산자로 ‘정렬된 배열’ 로써 반환하는, sorted() 메소드를 사용합니다.
-
-
-//intersection(_:)21 메소드는 두 집합에 공통인 값만으로 새 집합을 생성하기 위해 사용합니다.
+food.sorted()
+num.sorted()
+//intersection(_:) 메소드는 두 집합에 공통인 값만으로 새 집합을 생성하기 위해 사용합니다.
 //symmetricDifference(_:)22 메소드는 각 집합에는 있지만, 동시에 있지는 않은 값으로 새 집합을 생성하기 위해 사용합니다.
 //union(_:) : 메소드는 두 집합에 있는 모든 값으로 새 집합을 생성하기 위해 사용합니다.
 //subtracting(_:)메소드는 지정한 집합에는 없는 값으로 새 집합을 생성하기 위해 사용합니다.
+var EmojiA: Set = ["😏", "🤪", "😘", "🤩", "☺️", "😆"]
+var EmojiB: Set = ["😁", "😙", "😎", "🤪", "🥰", "☺️"]
+var EmojiC: Set = ["😆", "☺️", "😘"]
 
+EmojiA.intersection(EmojiB)//공통된 값
+EmojiA.symmetricDifference(EmojiB)// 동시에 있지 않은값
+EmojiB.union(EmojiC)//두개의 set을 더한다
+EmojiA.subtracting(EmojiC)// EmojiA에서 EmojiB를 빼고 남은값
 
 //Set Membership and Equality (집합의 포함관계 및 같음 비교)
 //“같음 (is equal)” 연산자 (==) 는 두 집합이 모두 같은 값을 담고 있는지 결정하기 위해 사용합니다.
@@ -142,7 +151,7 @@ food
 //isStrictSubset(of:) 또는 isStrictSuperset(of:) 메소드는 집합이, 지정된 집합의, ‘진 하위 집합 (진 부분 집합)’ 또는 ‘진 상위 집합’ 인지 결정하기 위해 사용합니다.
 //isDisjoint(with:) 메소드는 두 집합에 공통인 값이 없는지 결정하기 위해 사용합니다.
 
-
+EmojiA.isSuperset(of: EmojiC)//
 
 
 
