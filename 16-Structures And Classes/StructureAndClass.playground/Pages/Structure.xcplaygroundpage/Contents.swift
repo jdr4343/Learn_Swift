@@ -25,23 +25,24 @@ import UIKit
  # Structure
  ![Struct](struct.png)
  */
+//구조체 선언 문법
+struct Person {
+    var name: String
+    var age: Int
+    
+    func speak() {
+        print("Hello")
+    }
+}
+//인스턴스 생성
+let p = Person(name: "Steve", age: 50)
 
+p.name
+p.age
+//메소드 호출
+p.speak()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//함수와 메소드를 구분하는 건 단순합니다. 함수는 이름만으로 호출하고 메소드는 인스턴스를 이용해 호출합니다.
 
 
 
