@@ -25,8 +25,21 @@ import UIKit
  # Identity Operator
  ![identity-op](identity-op.png)
  */
+//항등연산자
+// === 인스턴스의 주소가 동일한경우 true리턴
+// !== 인스턴스의 주소가 다른경우 true를 리턴
 
+class A {
+    
+}
+let a = A()
+let b = a
+let c = A()
 
+a === b
+a !== b
+a !== c
+a === c
 
 
 
