@@ -25,9 +25,21 @@ import UIKit
  # Nested Types
  ![nested-type](nested-type.png)
  */
+//형식 내부에 선언된 형식
+class One {
+    struct Two {
+        enum Three {
+            case a
+            
+            class four {
+                
+            }
+        }
+    }
+    var a = One.Two
+}
 
-
-
+let two: One.Two = One.Two()
 
 
 
