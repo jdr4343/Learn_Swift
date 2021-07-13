@@ -29,7 +29,7 @@ import Foundation
  # Comparable for Classes
  */
 
-enum MembershipGrade {
+enum MembershipGrade: String {
    case normal
    case premium
    case vip
@@ -47,6 +47,31 @@ class Membership {
       self.point = point
    }
 }
+
+extension MembershipGrade: Comparable {
+    static func < (lhs: MembershipGrade, rhs: MembershipGrade) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+}
+
+
+extension Membership: Comparable {
+    static func == (lhs: Membership, rhs: Membership) -> Bool {
+        return lhs.name == rhs.name && lhs.point == rhs.point && lhs.grade == rhs.grade
+    }
+    
+    static func < (lhs: Membership, rhs: Membership) -> Bool {
+        return lhs.name < rhs.name && lhs.point < rhs.point && lhs.grade < rhs.grade
+        
+    }
+}
+
+
+
+
+
+
+
 
 let a = Membership(name: "James", grade: .premium, point: 123)
 let b = Membership(name: "Yuna", grade: .vvip, point: 2020)

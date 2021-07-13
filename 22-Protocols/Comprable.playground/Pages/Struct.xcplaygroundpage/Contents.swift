@@ -30,10 +30,15 @@ import Foundation
  */
 
 struct Person {
+    
    let name: String
    let age: Int
 }
-
+extension Person: Comparable {
+static func < (lhs: Person, rhs: Person) -> Bool {
+    return lhs.name < rhs.name && lhs.age < rhs.age
+    }
+}
 let a = Person(name: "Paul", age: 12)
 let b = Person(name: "Smith", age: 33)
 
