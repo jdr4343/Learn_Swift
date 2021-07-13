@@ -26,6 +26,8 @@ import Foundation
  # Protocol Composition
  ![composition](composition.png)
  */
+//프로토콜 컴포지션 하나의 형식은 다수의 프로토콜을 채용할수 있습니다.그리고 프로토콜을 채용한 형식의 인스턴스는 프로토콜 형식으로 저장될수 있습니다.
+
 
 protocol Resettable {
    func reset()
@@ -63,12 +65,21 @@ class Oval: Circle {
 
 let r: Resettable = Size()
 let p: Printable = Size()
+// 만약 두프로토콜을 모두 충족시키고 싶을때 Protocol Composition을 사용합니다.
 
-
+let rp: Resettable & Printable = Size()
+//여기에서 Size() 인스턴스를 저장할수 있는이유는 Size클래스가 두프로토콜을 모두 채용하고 있기때문입니다
 /*:
  ![composition2](composition2.png)
  */
+//클래스와 프로토콜이 혼합된 형태
+//문법처럼 프로토콜 컴포지션에 클래스를 추가하면 모든 서브 클래스를 저장할수 있게 됩니다.
+//새로운 변수를 선언하고 Circle 클래스 계층에 있고 Resettable 프로토콜을 채용한 인스턴스를 저장해 보겠습니다.
 
+var cr: Circle & Resettable = Circle()
+
+cr = Oval()
+//Oval 클래스를 보면 Circle 클래스를 상속합니다. 그리고 Circle 클래스로 부터 상속받은 구현으로 Resettable 프로토콜의 요구사항을 충족시킵니다. 그래서 마지막 코드처럼 cr변수에 문제없이 저장할수 있습니다.
 
 
 
