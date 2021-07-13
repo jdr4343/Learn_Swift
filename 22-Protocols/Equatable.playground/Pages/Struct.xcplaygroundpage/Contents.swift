@@ -28,8 +28,8 @@ import Foundation
 /*:
  # Equatable for Structures
  */
-
-struct Person {
+// 여기있는 Person 구조체는 Equatable 구현하지 않았기 때문에 비교연산이 에러가 뜹니다 Equatable 를 추가해주면 에러가 뜨지 않습니다.
+struct Person: Equatable {
    let name: String
    let age: Int
 }
@@ -37,7 +37,10 @@ struct Person {
 let a = Person(name: "Steve", age: 50)
 let b = Person(name: "Paul", age: 27)
 
-
-
+a == b
+//Equatable 채용하겠다고 선언만 하면 두 인스턴스를 비교할수 있습니다.
+//열거형과 마찬가지로 여기에도 조건이 있습니다.
+//구조체에 포함된 모든 형식이 기본 형식으로 선언되어 있다면 / Equatable구현한 형식으로 선언되어 있다면 구조체의 Equatable구현을 자동으로 추가합니다.
+//이때 우리가 해야하는 작업은 Equatable 프로토콜을 채용하겠다고 선언하는것 뿐입니다.
 
 //: [Next](@next)
