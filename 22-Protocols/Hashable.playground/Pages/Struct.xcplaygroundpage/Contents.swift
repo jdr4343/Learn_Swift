@@ -28,14 +28,16 @@ import Foundation
 /*:
  # Hashable for Structures
  */
-
-struct Person {
+//구조체 역시 특정조건이 충족되면 Hashable구현이 자동으로 제공됩니다.
+struct Person: Hashable {
    let name: String
    let age: Int
 }
+//모두 기본형식으로 선언되어 있고 여기에서 Hashable 을 채용한다고 선언하면 프로토콜 구현이 자동으로 제공됩니다.
 
+let set: Set = [Person(name: "Tom", age: 12)]
 
-
+let type: [Person: String]
 
 
 //: [Next](@next)
