@@ -25,7 +25,7 @@ import UIKit
  # self
  ![self](self.png)
  */
-
+//자동으로 제공되는 특별한 속성인 self와 super에 대해 알아봅시다
 class Size {
    var width = 0.0
    var height = 0.0
