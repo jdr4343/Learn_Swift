@@ -63,7 +63,8 @@ struct UserDefaultsHelper<Value> {//모든 타입을 지원할수 있도록 제�
             UserDefaults.standard.setValue(newValue, forKey: key)
         }
     }
-        //projectedValue 알아보겠습니다. UserDefaultsHelper를 Property Wrapper로 선언했다고 해서 단순히 읽고 쓰는 기능만 구현해야하는건 아닙니다. 필요한 기능이 있다면 타입에 얼마든지 자유롭게 추가할수 있습니다.
+        //projectedValue를 통해 타입 외부에서 Property Wrapper에 접근하는 방법을 알아봅시다.
+    //UserDefaultsHelper를 Property Wrapper로 선언했다고 해서 단순히 읽고 쓰는 기능만 구현해야하는건 아닙니다. 필요한 기능이 있다면 타입에 얼마든지 자유롭게 추가할수 있습니다.
         //여기에서 기본값으로 초기화하는 리셋메소드를 쓰겠습니다.
         func reset() {
             UserDefaults.standard.setValue(defaultValue, forKey: key)
