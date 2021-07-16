@@ -89,3 +89,4 @@ class Rhombus: Square {
 }
 //let dr = s as! Rhombus
 //Rhombus 상수가 동일한 상속 계층에 있지만 인스턴스의 원래 형식인 Square 보다 아래쪽에 있습니다. 이경우에는 DownCasting 이 실패합니다.
+
