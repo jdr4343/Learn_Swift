@@ -40,11 +40,11 @@ class Size {
             print(width, "=>", newValue)
         }
         didSet {
-            print(oldValue, "=>", width)
+            print(oldValue, "=<", width)
         }
     }
 }
 //속성이 변경되는 시점에 실행하고 싶다면 Property Observer 속성을 추가합니다.한번 추가해보겠습니다.
 
 let s = Size()
-s.width = 123
+s.width = 124

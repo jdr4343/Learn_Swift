@@ -35,9 +35,10 @@ outher: for i in 1...3 {
     for j in 1...3 {
         print("inner" , j)
         
-        break outher// 이제 이브레이크는 안쪽에 있는 for j in 을 멈추는게 아니다 i 포인 메소드를 종료 하게 됩니다.
+        break outher// 이제 이브레이크는 안쪽에 있는 for j in 을 멈추는게 아니라 i 포인 메소드를 종료 하게 됩니다.
     }
 }
+
 
 
 

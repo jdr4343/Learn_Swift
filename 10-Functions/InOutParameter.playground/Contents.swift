@@ -43,7 +43,7 @@ swapNumber(num1, with: num2)
  ![inout-call](inout-call.png)
  */
 func swapNumber(_ a: inout Int, with b: inout Int) {
-var tmb = a
+    let tmb = a
     a = b
     b = tmb
 }
