@@ -68,3 +68,17 @@ Tuple.0 = "hunsu"
 //tuple name appoint
 var Tuple1: (name: String, age: Int, height: Double) = ("Miho", 99, 123.2)
 Tuple1.name = "sangho"
+
+//Array 배열
+var array: Array<String> = []
+var names = ["jihun", "Sangho", "Miho"]
+array.isEmpty
+names.count
+//using index
+names[2]
+names[0] = "BBib"
+names.remove(at: 0)
+names.insert("Max", at: 0)
+names.removeLast()
+names.append("Babo")
+names.insert(contentsOf: ["josha", "kakalote"], at: 1)
