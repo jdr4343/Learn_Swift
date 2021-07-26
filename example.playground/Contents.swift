@@ -82,3 +82,23 @@ names.insert("Max", at: 0)
 names.removeLast()
 names.append("Babo")
 names.insert(contentsOf: ["josha", "kakalote"], at: 1)
+names.shuffle()
+names.randomElement()
+
+//Dictionary 딕셔너리 키와 값이 쌍을 이루는 형식
+var dict: Dictionary<String, Int> = [:]
+var dict1: [String: Int] = [:]
+var classMember = [3: "jihun", 4: "munghun", 12: "pinky"]
+print(classMember[3]!)
+classMember[5] = "manggo"
+
+//Set 세트
+let emptySet:Set<String> = []
+var fruit: Set<String> = ["manggo", "apple", "melon"]
+fruit.count
+fruit.insert("water melon")
+fruit.remove("melon")
+
+//enum 열거형
+
+
