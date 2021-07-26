@@ -1,3 +1,4 @@
+import UIKit
 
 //String Interpolation 문자열 보간법
 var name = "jihun"
@@ -58,3 +59,12 @@ let cBool = true
 //Type Aliases
 typealias Number = Int
 var num1 :Number = 12
+
+//tuple
+var Tuple: (String, Int, Double) = ("jihun", 26, 177.23)
+//using index
+print("name: \(Tuple.0) age: \(Tuple.1) height \(Tuple.2)")
+Tuple.0 = "hunsu"
+//tuple name appoint
+var Tuple1: (name: String, age: Int, height: Double) = ("Miho", 99, 123.2)
+Tuple1.name = "sangho"
