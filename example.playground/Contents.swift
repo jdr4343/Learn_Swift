@@ -1,4 +1,6 @@
 import UIKit
+//Swift easy example
+
 
 //String Interpolation 문자열 보간법
 var name = "jihun"
@@ -100,5 +102,88 @@ fruit.insert("water melon")
 fruit.remove("melon")
 
 //enum 열거형
+//not appennd And change
+enum School {
+    case primary
+    case elementary
+    case middle
+    case high
+    case college
+    case university
+    case graduate
+}
+//you can make enum one raw ex) case primary, elementary, middle, high
+var highestEducationLevel: School = .university
+highestEducationLevel = .graduate
+enum shoppingList: String {
+    case Apple = "1doller"
+    case meat = "3doller"
+}
+//you can use rawValue...
+print("meat price \(shoppingList.meat.rawValue)")
+let apple = shoppingList(rawValue: "1doller")
+// attribute-value
+enum maindish {
+    case bulgogi(taste: String)
+    case pakimchi(ingredient: String)
+    case muguk(withSalt: Bool)
+    case rice
+}
+var dinner: maindish = maindish.bulgogi(taste: "sweet")
+dinner = .pakimchi(ingredient: "greenOnion")
+dinner = .muguk(withSalt: true)
+dinner = .rice
+//limit value
+enum pasta: CaseIterable {
+    case cream, tomato
+}
+enum pizzaDough: CaseIterable {
+    case cheseCrust, thin, original
+}
+enum pizzaTopping: CaseIterable {
+    case peperoni, cheese, bacon, meat
+}
+enum mainDish {
+    case pasta(taste: pasta)
+    case pizza(dough: pizzaDough, topping: pizzaTopping)
+    case chiken(withSauce: Bool)
+    case rice
+    
+}
+var dinner1 = mainDish.pasta(taste: pasta.cream)
+dinner1 = .pizza(dough: pizzaDough.thin, topping: pizzaTopping.cheese)
+dinner1 = .chiken(withSauce: true)
+dinner1 = .rice
+//CaseIterable protocol And allcases
+enum exSchool: CaseIterable {
+    case primary
+    case elementary
+    case middle
+    case high
+    case college
+    case university
+    case graduate
+}
+let allcases: [exSchool] = exSchool.allCases
+//indirect: When the associated value is at its own value
+indirect enum ciga {
+    case malboru(String)
+    case mildeSeven(Int)
+}
+ciga.malboru("taste Good")
+ciga.mildeSeven(20)
+//Comparable Protocol: enum compare. The case in front of you will be a smaller value.
+enum Condition: Comparable {
+    case terrible
+    case bad
+    case good
+    case great
+}
+let myCondition: Condition = Condition.great
+let yourCondition: Condition = Condition.bad
 
-
+if myCondition >= yourCondition {
+    print("I'm in better shape.")
+} else {
+    print("You're in better shape")
+}
