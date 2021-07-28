@@ -196,3 +196,54 @@ if myCondition >= yourCondition {
 } else {
     print("You're in better shape")
 }
+
+//Basic Operators
+//Assignment Operator 할당 연산자
+let a = 1
+
+//Arithmetic Operators 산술 연산자
+var i = 1 + 1
+i = 1 - 1
+i = 3 * 3
+i = 2 / 1
+i = 3 % 1
+let q = 3, w = 5, e = 12, r = 3
+
+//Comparison Operators 비교 연산자
+q > w
+q < w
+q == r
+q >= e
+q <= r
+q != r
+
+//Reference Operators 참조 연산자
+class Someclass {
+    
+}
+let referenceA: Someclass = Someclass()
+let referenceB: Someclass = Someclass()
+let referenceC: Someclass = referenceA
+let isSameReferenceAB: Bool = referenceA === referenceB
+let isSameReferenceAC: Bool = referenceA === referenceC
+let notEqualReferenceAC: Bool = referenceA !== referenceC
+
+//Ternary Conditional Operator 삼항 연산자
+//if true left /false right
+q > w ? e : r
+
+//Range Operators 범위 연산자
+1...3
+1..<3
+1...
+...1
+..<q
+
+//Logical Operators 부울연산자
+if !(q > w) {
+    print("! Operator is bool Value reversal")
+} else if q > w && q == r {
+    print("&& Operator is action when all value is true ")
+} else if q > w || q == r {
+    print("|| Operator is action when one value is true")
+}
