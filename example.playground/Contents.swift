@@ -247,3 +247,113 @@ if !(q > w) {
 } else if q > w || q == r {
     print("|| Operator is action when one value is true")
 }
+
+//Controll flow 흐름제어
+//if
+let rowValue = 0
+let highValue = 10
+let equalValue = 10
+
+if rowValue > highValue {
+    print("rowValue is high")
+} else if highValue == equalValue {
+    print("highValue and rowValue is equalValue")
+} else {
+    print("All wrong")
+}
+
+//switch
+switch highValue {
+case 3:
+    print("NO")
+case 3...7:
+    print("no")
+case (5 + 5):
+    print("true")
+    fallthrough
+default:
+    print("fallthrough is next case execute")
+    print("default == else")
+    
+}
+
+let stringTupleValue: (name: String, age: Int) = ("Jihun", 26)
+switch stringTupleValue {
+case ("hunsu", 23):
+    print("NO")
+case ("Jihun", _):
+    print("Only the name was corrct")
+case (_, 26):
+    print("Only the age was corrct")
+default:
+    break
+    
+}
+
+let animal = "Dog"
+let age = 1
+let cute = true
+
+switch animal {
+case "Dog" where cute == true:
+    print("Yeah, puppies are cute. Cute saves the world.")
+case "Dog" where age > 2:
+        print("No")
+case "Dog" where age > 11 && cute == false:
+    print("No way. Dogs get cuter with age.")
+default:
+    break
+}
+
+enum Menu {
+    case chiken, hamburger, bulgogi, kimchi
+}
+let lunchMenu: Menu = .kimchi
+switch lunchMenu {
+case .chiken:
+    print("Umm tasty good")
+case .hamburger:
+    print("hell yeah")
+case .bulgogi:
+    print("I'm full")
+@unknown case _:
+    print("If all values have been processed, default blocks are not required. However, it is recommended that you add @unknown later because adding new values to the enum can cause logical errors.")
+}
+
+//Repetitive statements
+//for in
+for _ in 1...3 {
+    print("anything")
+}
+
+for i in 0...5 {
+    if i.isMultiple(of: 2) {
+        print(i)
+        continue
+    }
+    print("\(i) == Odd Number\nThe Continue keyword immediately skips to the next sequence.")
+}
+
+//while
+var whilename = ["minsu", "nani", "unjong"]
+while whilename.isEmpty == false {
+    print("nani ♥️ \(whilename.remove(at: 0))")
+}
+
+var num3 = 100
+while num3 < 100 {
+    num3 += 1
+}
+num3
+//repeat while
+whilename = ["minsu", "nani", "unjong"]
+repeat {
+    print("nani ♥️ \(whilename.remove(at: 0))")
+}while whilename.isEmpty == false
+
+num3 = 100
+repeat {
+    num3 += 1
+    
+}while num3 < 100
+num3
