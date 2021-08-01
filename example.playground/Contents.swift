@@ -298,7 +298,7 @@ switch animal {
 case "Dog" where cute == true:
     print("Yeah, puppies are cute. Cute saves the world.")
 case "Dog" where age > 2:
-        print("No")
+    print("No")
 case "Dog" where age > 11 && cute == false:
     print("No way. Dogs get cuter with age.")
 default:
@@ -357,3 +357,44 @@ repeat {
     
 }while num3 < 100
 num3
+
+//funtion
+//The funtion And method are the same by default
+func greet1() {
+    print("hello")
+}
+greet1()
+func comparison() {
+    if a == q {
+        print("equal")
+    } else {
+        print("NO")
+    }
+}
+comparison()
+func introduce(name: String, age: Int) -> String {
+    "My name is \(name) and \(age)."
+}
+introduce(name: "jihun",age: 26)
+
+//Use argumentLable
+func sayHello(to name: String, from myname: String) -> String {
+    "Hello \(name) my name is \(myname)"
+    
+}
+sayHello(to: "jihun", from: "miho")
+
+//you can omit it. and two funtion have equal name. The reason for that is because the Agyumen label is different.
+func sayHello(_ name: String, _ myname: String...) -> String {
+    "Hello \(name) my name is \(myname)"
+    
+}
+print(sayHello("jihun", "miho", "지훈"))
+
+func plusValue(to a: Int = 3, from b: Int = 4) {
+    print(a + b)
+}
+plusValue()
+plusValue(to: 1)
+plusValue(to: 12, from: 32)
+2
