@@ -397,4 +397,14 @@ func plusValue(to a: Int = 3, from b: Int = 4) {
 plusValue()
 plusValue(to: 1)
 plusValue(to: 12, from: 32)
-2
+//Funtion Types
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+// == (Int, Int) -> Int
+func printgreet() {
+print("hello")
+}
+// == Void
+var mathFuntion = addTwoInts
+mathFuntion(3, 4)
