@@ -408,3 +408,22 @@ print("hello")
 // == Void
 var mathFuntion = addTwoInts
 mathFuntion(3, 4)
+
+//Optional
+var Interjection: String? = "HOwwow!"
+print(Interjection)
+//Forced Unwrapping /Danger
+var myInterjection: String = Interjection!
+//safety
+if Interjection != nil {
+   print(Interjection!)
+} else {
+    print("This value is nil")
+}
+
+//Optional Binding
+if let Howow = Interjection {
+    print(Howow)
+} else {
+    print("nil")
+}
