@@ -411,6 +411,7 @@ mathFuntion(3, 4)
 
 //Optional
 var Interjection: String? = "HOwwow!"
+var nameJigu: String? = "jigu"
 print(Interjection)
 //Forced Unwrapping /Danger
 var myInterjection: String = Interjection!
@@ -422,8 +423,20 @@ if Interjection != nil {
 }
 
 //Optional Binding
-if let Howow = Interjection {
-    print(Howow)
+if let Howow = Interjection,let Jajigu = nameJigu {
+    print(Howow,Jajigu)
 } else {
     print("nil")
 }
+
+//Implicitly Unwrapped Optional
+var myname2: String! = "yagom"
+print(myname2)
+myname2 = nil
+
+if let name = myname2 {
+    print("my name is \(name)")
+} else {
+    print("myName == nil")
+}
+//myname2.isEmpty
