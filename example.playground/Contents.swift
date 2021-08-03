@@ -439,4 +439,6 @@ if let name = myname2 {
 } else {
     print("myName == nil")
 }
-//myname2.isEmpty
+
+
+
