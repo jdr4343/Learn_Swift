@@ -440,5 +440,38 @@ if let name = myname2 {
     print("myName == nil")
 }
 
+//struct
+struct BasicStruct {
+    var name: String = "hun"
+    var age: Int = 26
+}
+var jihun: BasicStruct = BasicStruct(name: "jihun", age: 23)
+var value = jihun
+value.age = 12
+print(value.age)
+print(jihun.age)
+
+
+//class
+class Person {
+    var height: Double = 175.0
+    var weight: Int = 74
+}
+class Model: Person {
+
+ }
+
+var hungi = Model()
+var Reference = hungi
+hungi.height = 192.3
+hungi.weight = 72
+print(hungi.height)
+print(Reference.height)
+
+
+
+
+
+
 
 
