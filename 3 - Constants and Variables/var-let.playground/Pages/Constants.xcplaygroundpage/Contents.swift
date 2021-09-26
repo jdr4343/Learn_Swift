@@ -31,3 +31,17 @@ import UIKit
  */
 //불변
 let Name = "Yoona"
+let count = 3
+var target = 0
+
+if (count % 86400) == 0 {
+    target += 1
+    print("\(target)일")
+}
+
+for _ in 0...count {
+    if (count % 86400) == 0 {
+        target += 1
+        print("\(target)일")
+    }
+}
